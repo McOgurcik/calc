@@ -245,6 +245,3 @@ def layout123():
 #
 #             [[sg.Menu(menu_def)]]]
 # Create the Window
-def otvet_layout():
-    otvet_layout = [[sg.Multiline('  '+a+'  ')],[sg.Button('Exit')]]
-    return otvet_layout

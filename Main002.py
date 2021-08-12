@@ -28,12 +28,14 @@ sg.theme('DefaultNoMoreNagging')   # Add a touch of color
 # All the stuff inside your window.
 
 
-
+def otvet_layout():
+    otvet_layout = [[sg.Multiline('  '+a+'  ')],[sg.Button('Exit')]]
+    return otvet_layout
 def otvet(otvet):
     global a
     a = otvet
     a = str(a)
-    window_o = sg.Window('otvet',l.otvet_layout(),icon='name.ico')
+    window_o = sg.Window('otvet',otvet_layout(),icon='name.ico')
     while True:
         event, values = window_o.read()
         # print(event, values)
