@@ -6,6 +6,7 @@ import sys
 import math
 import winsound
 import images
+import layouts as l
 # import webbrowser ля интеграции веб ссылок  [sg.Text('www.PySimpleGUI.org', font='default 12 underline', text_color='blue', enable_events=True, key='-LINK-')],
 #elif event == '-LINK-':
         # if the text was clicked, open a browser using the text as the address
@@ -27,256 +28,12 @@ sg.theme('DefaultNoMoreNagging')   # Add a touch of color
 # All the stuff inside your window.
 
 
-def tab2_layout_1():
-    tab2_layout_1 = [[sg.Button('Площадь Прямоугольного треугольника S=a*b*0.5')]]
-    return  tab2_layout_1
-def tab2_layout_2():
-    tab2_layout_2 = [[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α')]]
-    return tab2_layout_2
-def tab2_layout_3():
-    tab2_layout_3 = [[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5')]]
-    return tab2_layout_3
-def kv_ur_layout():
-    kv_ur_layout = [[sg.Button('Квадратное уравнение по дискриминанту')], [sg.Button('Квадратное уравнение по теореме Виета')]]
-    return kv_ur_layout
-def s_umn_layout():
-    s_umn_layout =  [[sg.Button('Квадрат суммы (a+b)^2'), sg.Button('Квадрат разности (a-b)^2')],
-               [sg.Button('Куб суммы (a+b)^3'), sg.Button('Куб разности (a+b)^3')],
-               [sg.Button('Разность кубов a^2-b^2')]
 
-               ]
-    return s_umn_layout
-def pr_rash_layout():
-    pr_rash_layout = [[sg.Button('log'),sg.Button('arccos'),sg.Button('arcsin'),sg.Button('arctan')],[sg.Button('cos'),sg.Button('sin'),sg.Button('tan')]
-    ]
-    return pr_rash_layout
-def tab1_layout():
-    tab1_layout = [
-
-              [sg.TabGroup([[sg.Tab('Формулы сокращённого умножения', s_umn_layout()), sg.Tab('Квадратные уравнения', kv_ur_layout()), sg.Tab('Расчёты прямых значений', pr_rash_layout())]])] ]
-    return tab1_layout
-def tab2_layout():
-    tab2_layout = [
-
-              [sg.TabGroup([[sg.Tab('Площади', tab2_layout_1()), sg.Tab('Тригонометрия', tab2_layout_2()),sg.Tab('Стереометрия', tab2_layout_3())]])] ]
-    return tab2_layout
-def summakvadrata_layout():
-    summakvadrata_layout = [
-            [sg.Text('(a+b)^2')],
-            [sg.Text('a'), sg.InputText(0)],
-            [sg.Text('b'), sg.InputText(0)],
-            [sg.Button('Рассчитать'), sg.Button('Cancel')] ]
-    return summakvadrata_layout
-def raznostkvadrata_layout():
-    raznostkvadrata_layout = [
-            [sg.Text('(a-b)^2')],
-            [sg.Text('a'), sg.InputText(0)],
-            [sg.Text('b'), sg.InputText(0)],
-            [sg.Button('Рассчитать'), sg.Button('Cancel')] ]
-    return raznostkvadrata_layout
-def summakuba_layout():
-    summakuba_layout = [
-            [sg.Text('(a+b)^3')],
-            [sg.Text('a'), sg.InputText(0)],
-            [sg.Text('b'), sg.InputText(0)],
-            [sg.Button('Рассчитать'), sg.Button('Cancel')] ]
-    return summakuba_layout
-def raznostkuba_layout():
-    raznostkuba_layout = [
-            [sg.Text('(a-b)^3')],
-            [sg.Text('a'), sg.InputText(0)],
-            [sg.Text('b'), sg.InputText(0)],
-            [sg.Button('Рассчитать'), sg.Button('Cancel')] ]
-    return raznostkuba_layout
-def raznostkubov_layout():
-    raznostkubov_layout = [
-           [sg.Text('a^2-b^2')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return raznostkubov_layout
-def ploshadtriugolnika_layout():
-    ploshadtriugolnika_layout = [
-           [sg.Text('S=a*b*0.5')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return ploshadtriugolnika_layout
-def log_layout():
-    log_layout = [
-            [sg.Text('log')],
-            [sg.Text('x'), sg.InputText(0)],
-            [sg.Text('Основание логарифма'), sg.InputText(0)],
-            [sg.Button('Рассчитать'), sg.Button('Cancel')] ]
-    return log_layout
-# layout_otvet = [[sg.InputText(a)]]
-def inf_layout():
-    inf_layout = []
-    return inf_layout
-def fuz_layout():
-    fuz_layout = []
-    return fuz_layout
-def kv_ur_dis_layout():
-    kv_ur_dis_layout = [
-                    [sg.Text('Аргументы Квадратного уравнения')],
-                    [sg.Text('a'), sg.InputText(0)],
-                    [sg.Text('b'), sg.InputText(0)],
-                    [sg.Text('c'), sg.InputText(0)],
-                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return kv_ur_dis_layout
-def kv_ur_vi_layout():
-    kv_ur_vi_layout = [
-                    [sg.Text('Аргументы Квадратного уравнения (ТОЛЬКО ЦЕЛОЧИСЛЕННЫЕ!!! )')],
-                    [sg.Text('a'), sg.InputText(0)],
-                    [sg.Text('b'), sg.InputText(0)],
-                    [sg.Text('c'), sg.InputText(0)],
-                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return kv_ur_vi_layout
-def diag_paralel_layout():
-    diag_paralel_layout =  [
-                    [sg.Text('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5')],
-                    [sg.Text('a'), sg.InputText(0)],
-                    [sg.Text('b'), sg.InputText(0)],
-                    [sg.Text('c'), sg.InputText(0)],
-                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return diag_paralel_layout
-def Sin_sum_layout():
-    Sin_sum_layout = [
-           [sg.Text('Sin(α+β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return Sin_sum_layout
-def arccos_layout():
-    arccos_layout = [
-           [sg.Text('arccos')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return arccos_layout
-def arcsin_layout():
-    arcsin_layout = [
-           [sg.Text('arcsin')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return arcsin_layout
-def arctan_layout():
-    arctan_layout = [
-           [sg.Text('arctan')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return arctan_layout
-def sin_layout():
-    sin_layout = [
-           [sg.Text('sin')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return sin_layout
-def cos_layout():
-    cos_layout = [
-           [sg.Text('cos')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return cos_layout
-def tan_layout():
-    tan_layout = [
-           [sg.Text('tan')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return tan_layout
-def Sin_razn_layout():
-    Sin_razn_layout = [
-           [sg.Text('Sin(α-β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return Sin_razn_layout
-def Cos_sum_layout():
-    Cos_sum_layout = [
-           [sg.Text('Cos(α+β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return Cos_sum_layout
-def Cos_razn_layout():
-    Cos_razn_layout = [
-           [sg.Text('Cos(α-β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return Cos_razn_layout
-def sin2a_layout():
-    sin2a_layout = [
-           [sg.Text('Sin2α')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return sin2a_layout
-def cos2a_layout():
-    cos2a_layout = [
-           [sg.Text('Cos2α')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return cos2a_layout
-def tg2a_layout():
-    tg2a_layout = [
-           [sg.Text('tg2α')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return tg2a_layout
-
-
-def menu_def():
-    menu_def_ = [['File', ['Open', 'Save', 'Exit',]],
-                 ['Edit', ['Paste', ['Special', 'Normal',], 'Undo'],],
-                 ['Help', 'Автор...']]
-    return menu_def_
-def right_click_menu_layout():
-    right_click_menu =  [[], ['Exit']]
-    return right_click_menu
-def tg_sum_layout():
-    tg_sum_layout = [
-           [sg.Text('tg(α+β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return tg_sum_layout
-def tg_razn_layout():
-    tg_razn_layout = [
-           [sg.Text('tg(α-β)')],
-           [sg.Text('a'), sg.InputText(0)],
-           [sg.Text('b'), sg.InputText(0)],
-           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
-    return tg_razn_layout
-
-
-
-
-# ВСТАВЛЯТЬ СЮДА ВСЕ СПИКИ ПО МЕРЕ ОБНОВЛЕНИЯ!!!!!!!!!!!!!!!!!!!!
-#
-#
-#
-#
-def layout_all():
-    layout_all = [tab2_layout_1(), tab2_layout_2(), kv_ur_layout(), s_umn_layout(), tab1_layout(), tab2_layout(), summakvadrata_layout(), raznostkvadrata_layout(), summakuba_layout(), raznostkuba_layout(), raznostkubov_layout (), ploshadtriugolnika_layout (), inf_layout(), fuz_layout(),kv_ur_dis_layout(), layout(), menu_def()]
-    return layout_all
-def layout123():
-    layout123 = [[sg.Button('Print')],
-             [sg.Button('Exit')]  ]
-    return layout123
-
-#layout = [ [sg.TabGroup([[sg.Tab('Алгебра', tab1_layout()), sg.Tab('Геометрия', tab2_layout()) , sg.Tab('Информатика', inf_layout()) , sg.Tab('Физика', fuz_layout())]])],
-#
-#              [sg.Button('Exit'), sg.Button('debug')],
-#
-#             [[sg.Menu(menu_def)]]]
-# Create the Window
-def otvet_layout():
-    otvet_layout = [[sg.Multiline('  '+a+'  ')],[sg.Button('Exit')]]
-    return otvet_layout
 def otvet(otvet):
     global a
     a = otvet
     a = str(a)
-    window_o = sg.Window('otvet',otvet_layout(),icon='name.ico')
+    window_o = sg.Window('otvet',l.otvet_layout(),icon='name.ico')
     while True:
         event, values = window_o.read()
         # print(event, values)
@@ -288,7 +45,7 @@ def otvet(otvet):
 
 def debug():
     while True:
-       window = sg.Window('debug123', layout123(),icon='name.ico')
+       window = sg.Window('debug123', l.layout123(),icon='name.ico')
        event, values = window.read()
        print(event, values)
        if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -296,7 +53,7 @@ def debug():
            window.close()
            break
        if event == 'Print':
-           print(layout_all())
+           print(l.layout_all())
            window.close()
            break
 
@@ -306,7 +63,7 @@ def defsummakvadrata(a,b):
     return x
 def summakvadrata():
    while True:
-     window = sg.Window('Квадрат суммы (a+b)^2', summakvadrata_layout())
+     window = sg.Window('Квадрат суммы (a+b)^2', l.summakvadrata_layout())
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -346,7 +103,7 @@ def defraznostkvadrata(a,b):
     return x
 def raznostkvadrata():
     while True:
-      window = sg.Window('Квадрат разности (a-b)^2', raznostkvadrata_layout())
+      window = sg.Window('Квадрат разности (a-b)^2', l.raznostkvadrata_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -385,7 +142,7 @@ def defsummakuba(a,b):
     return x
 def summakuba():
     while True:
-      window = sg.Window('Сумма куба (a-b)^3', summakuba_layout())
+      window = sg.Window('Сумма куба (a-b)^3', l.summakuba_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -425,7 +182,7 @@ def defraznostkuba(a,b):
 
 def raznostkuba():
     while True:
-      window = sg.Window('Разность куба (a-b)^3', raznostkuba_layout())
+      window = sg.Window('Разность куба (a-b)^3', l.raznostkuba_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -464,7 +221,7 @@ def defraznostkubov(a,b):
     return(x)
 def raznostkubov():
     while True:
-      window = sg.Window('Разность кубов a^2-b^2', raznostkubov_layout())
+      window = sg.Window('Разность кубов a^2-b^2', l.raznostkubov_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -502,7 +259,7 @@ def raznostkubov():
 
 def ploshadtriugolnika():
     while True:
-      window = sg.Window('Площадь Прямоугольного треугольника S=a*b*0.5', ploshadtriugolnika_layout())
+      window = sg.Window('Площадь Прямоугольного треугольника S=a*b*0.5', l.ploshadtriugolnika_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -555,7 +312,7 @@ def def_kv_ur_dis(a,b,c):
         return(x)
 def kv_ur_dis():
     while True:
-      window = sg.Window('Квадратное уравнение по дискриминанту', kv_ur_dis_layout())
+      window = sg.Window('Квадратное уравнение по дискриминанту', l.kv_ur_dis_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -618,7 +375,7 @@ def def_kv_ur_vi(a,b,c):
 
 def kv_ur_vi():
     while True:
-      window = sg.Window('Квадратное уравнение по теореме Виета', kv_ur_vi_layout())
+      window = sg.Window('Квадратное уравнение по теореме Виета', l.kv_ur_vi_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -659,7 +416,7 @@ def def_diag_paralel(a,b,c):
     return(d)
 def diag_paralel():
     while True:
-      window = sg.Window('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5', diag_paralel_layout())
+      window = sg.Window('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5', l.diag_paralel_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -704,7 +461,7 @@ def def_log(a,b):
 
 def log():
     while True:
-      window = sg.Window('log', log_layout())
+      window = sg.Window('log', l.log_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -746,7 +503,7 @@ def def_Sin_sum(a,b):
 
 def Sin_sum():
      while True:
-      window = sg.Window('Sin(α+β)', Sin_sum_layout())
+      window = sg.Window('Sin(α+β)', l.Sin_sum_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -787,7 +544,7 @@ def def_arccos(a):
 
 def arccos():
     while True:
-      window = sg.Window('arccos', arccos_layout())
+      window = sg.Window('arccos', l.arccos_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -826,7 +583,7 @@ def def_arcsin(a):
          return('Ошибка')
 def arcsin():
     while True:
-      window = sg.Window('arcsin', arcsin_layout())
+      window = sg.Window('arcsin', l.arcsin_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -865,7 +622,7 @@ def def_arctan(a):
          return('Ошибка')
 def arctan():
     while True:
-      window = sg.Window('arctan', arctan_layout())
+      window = sg.Window('arctan', l.arctan_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -905,7 +662,7 @@ def def_sin(a):
          return('Ошибка')
 def sin():
     while True:
-      window = sg.Window('sin', sin_layout())
+      window = sg.Window('sin', l.sin_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -945,7 +702,7 @@ def def_cos(a):
          return('Ошибка')
 def cos():
     while True:
-      window = sg.Window('cos', cos_layout())
+      window = sg.Window('cos', l.cos_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -985,7 +742,7 @@ def def_tan(a):
          return('Ошибка')
 def tan():
     while True:
-      window = sg.Window('tan', tan_layout())
+      window = sg.Window('tan', l.tan_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1029,7 +786,7 @@ def def_Sin_razn(a,b):
 
 def Sin_razn():
      while True:
-      window = sg.Window('Sin(α-β)', Sin_razn_layout())
+      window = sg.Window('Sin(α-β)', l.Sin_razn_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1074,7 +831,7 @@ def def_Cos_sum(a,b):
 
 def Cos_sum():
      while True:
-      window = sg.Window('Cos(α+β)', Cos_sum_layout())
+      window = sg.Window('Cos(α+β)', l.Cos_sum_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1117,7 +874,7 @@ def def_Cos_razn(a,b):
 
 def Cos_razn():
      while True:
-      window = sg.Window('Cos(α-β)', Cos_razn_layout())
+      window = sg.Window('Cos(α-β)', l.Cos_razn_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1156,7 +913,7 @@ def def_tg_sum(a,b):
     return x
 def tg_sum():
      while True:
-      window = sg.Window('tg(α+β)', tg_sum_layout())
+      window = sg.Window('tg(α+β)', l.tg_sum_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1196,7 +953,7 @@ def def_tg_razn(a,b):
 
 def tg_razn():
      while True:
-      window = sg.Window('tg(α-β)', tg_razn_layout())
+      window = sg.Window('tg(α-β)', l.tg_razn_layout())
       event, values = window.read()
       print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1234,7 +991,7 @@ def def_sin2a(a):
     return x
 def sin2a():
     while True:
-     window = sg.Window('sin2α', sin2a_layout())
+     window = sg.Window('sin2α', l.sin2a_layout())
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1273,7 +1030,7 @@ def def_cos2a(a):
     return x
 def cos2a():
     while True:
-     window = sg.Window('cos2α', cos2a_layout())
+     window = sg.Window('cos2α', l.cos2a_layout())
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1312,7 +1069,7 @@ def def_tg2a(a):
     return x
 def tg2a():
     while True:
-     window = sg.Window('tg2α', tg2a_layout())
+     window = sg.Window('tg2α', l.tg2a_layout())
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1347,11 +1104,9 @@ def tg2a():
          window.close()
          break
 
-def author_layout():
-    author_layout = [[sg.T('ку')],[sg.Button(image_data=images.mccree)]]
-    return author_layout
+
 def author():
-     window = sg.Window('author', author_layout())
+     window = sg.Window('author', l.author_layout())
      while True:
       event, values = window.read()
       print(event, values)
@@ -1374,10 +1129,10 @@ def author():
 def  window_main(title='Main',size=(1280, 720),s=(None, None), auto_size_text=None, click_submits=None, enable_events=False,font=None, text_color=None,
                  background_color='y', justification=None, pad=None,key=None, k=None, right_click_menu=None, tooltip=None, visible=True, metadata=None):
 
-     layout = [ [sg.TabGroup([[sg.Tab('Алгебра', tab1_layout()), sg.Tab('Геометрия', tab2_layout()) , sg.Tab('Информатика', inf_layout()) , sg.Tab('Физика', fuz_layout())]])],
+     layout = [ [sg.TabGroup([[sg.Tab('Алгебра', l.tab1_layout()), sg.Tab('Геометрия', l.tab2_layout()) , sg.Tab('Информатика', l.inf_layout()) , sg.Tab('Физика', l.fuz_layout())]])],
               [sg.Button('Выход',image_data=None, key='-EXIT-'), sg.Button('debug')],
-             [sg.Menu(menu_def())]]
-     return sg.Window(title, layout,size,background_color='#F3FB62',return_keyboard_events=True,finalize=True,right_click_menu=right_click_menu_layout(),icon='name.ico')
+             [sg.Menu(l.menu_def())]]
+     return sg.Window(title, layout,size,background_color='#F3FB62',return_keyboard_events=True,finalize=True,right_click_menu=l.right_click_menu_layout(),icon='name.ico')
 recording = have_data = False
 def Main(a):
     #
