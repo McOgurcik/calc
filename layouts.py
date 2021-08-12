@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import PySimpleGUI as sg #11111
 import images
 def author_layout():
     author_layout = [[sg.T('ку')],[sg.Button(image_data=images.mccree)]]
