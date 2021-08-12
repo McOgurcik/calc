@@ -1105,6 +1105,173 @@ def tg2a():
             return('Ошибка')
          window.close()
          break
+def def_sins_sum(a,b):
+    x = ((2*math.sin((a+b)/2))*(math.cos((a-b)/2)))
+    return x
+def sins_sum():
+     while True:
+      window = sg.Window('Sinα + Sinβ', l.sins_sum_layout())
+      event, values = window.read()
+      print(event, values)
+      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+          # os.execl(sys.executable, sys.executable, *sys.argv)
+          window.close()
+          return('Отменено')
+
+
+
+
+      if event == 'Рассчитать':
+
+          if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+              # os.execl(sys.executable, sys.executable, *sys.argv)
+              window.close()
+              return('Отменено')
+
+
+
+
+          a = values[0]
+          b = values[1]
+          a = float(a)
+          b = float(b)
+          try:
+              window.close()
+              return def_sins_sum(a,b)
+          except:
+             window.close()
+             return('Ошибка')
+          window.close()
+          break
+
+def def_sins_razn(a,b):
+    x = ((2*math.sin((a-b)/2))*(math.cos((a+b)/2)))
+    return x
+def sins_razn():
+     while True:
+      window = sg.Window('Sinα - Sinβ', l.sins_razn_layout())
+      event, values = window.read()
+      print(event, values)
+      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+          # os.execl(sys.executable, sys.executable, *sys.argv)
+          window.close()
+          return('Отменено')
+
+
+
+
+      if event == 'Рассчитать':
+
+          if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+              # os.execl(sys.executable, sys.executable, *sys.argv)
+              window.close()
+              return('Отменено')
+
+
+
+
+          a = values[0]
+          b = values[1]
+          a = float(a)
+          b = float(b)
+
+          try:
+              window.close()
+              return def_sins_razn(a,b)
+          except:
+             window.close()
+             return('Ошибка')
+          window.close()
+          break
+
+def def_coss_sum(a,b):
+    x = ((2*math.cos((a+b)/2))*(math.cos((a-b)/2)))
+    return x
+def coss_sum():
+     while True:
+      window = sg.Window('Cosα + Cosβ', l.coss_sum_layout())
+      event, values = window.read()
+      print(event, values)
+      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+          # os.execl(sys.executable, sys.executable, *sys.argv)
+          window.close()
+          return('Отменено')
+
+
+
+
+      if event == 'Рассчитать':
+
+          if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+              # os.execl(sys.executable, sys.executable, *sys.argv)
+              window.close()
+              return('Отменено')
+
+
+
+
+          a = values[0]
+          b = values[1]
+          a = float(a)
+          b = float(b)
+          try:
+              window.close()
+              return def_coss_sum(a,b)
+          except:
+             window.close()
+             return('Ошибка')
+          window.close()
+          break
+
+def def_coss_razn(a,b):
+    x = ((2*math.sin((a-b)/2))*(math.sin((a+b)/2)))
+    return x
+def coss_razn():
+     while True:
+      window = sg.Window('Cosα - Cosβ', l.coss_razn_layout())
+      event, values = window.read()
+      print(event, values)
+      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+          # os.execl(sys.executable, sys.executable, *sys.argv)
+          window.close()
+          return('Отменено')
+
+
+
+
+      if event == 'Рассчитать':
+
+          if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+              # os.execl(sys.executable, sys.executable, *sys.argv)
+              window.close()
+              return('Отменено')
+
+
+
+
+          a = values[0]
+          b = values[1]
+          a = float(a)
+          b = float(b)
+          try:
+              window.close()
+              return def_coss_razn(a,b)
+          except:
+             window.close()
+             return('Ошибка')
+          window.close()
+          break
+
+
+
+
+
+
+
 
 
 def author():
@@ -1292,6 +1459,26 @@ def Main(a):
           window.close()
           winsound.PlaySound("ButtonClick.wav", 1)
           otvet(tg2a())
+          break
+       if event == 'Sinα + Sinβ':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(sins_sum())
+          break
+       if event == 'Sinα - Sinβ':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(sins_razn())
+          break
+       if event == 'Cosα + Cosβ':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(coss_sum())
+          break
+       if event == 'Cosα - Cosβ':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(coss_razn())
           break
 
 

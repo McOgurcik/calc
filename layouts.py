@@ -7,7 +7,7 @@ def tab2_layout_1():
     tab2_layout_1 = [[sg.Button('Площадь Прямоугольного треугольника S=a*b*0.5')]]
     return  tab2_layout_1
 def tab2_layout_2():
-    tab2_layout_2 = [[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α')]]
+    tab2_layout_2 = [[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α')]]
     return tab2_layout_2
 def tab2_layout_3():
     tab2_layout_3 = [[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5')]]
@@ -222,8 +222,34 @@ def tg_razn_layout():
            [sg.Text('b'), sg.InputText(0)],
            [sg.Button('Рассчитать'), sg.Button('Cancel')]]
     return tg_razn_layout
-
-
+def sins_sum_layout():
+    sins_sum_layout = [
+           [sg.Text('Sinα + Sinβ')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('b'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return sins_sum_layout
+def sins_razn_layout():
+    sins_razn_layout = [
+           [sg.Text('Sinα - Sinβ')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('b'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return sins_razn_layout
+def coss_sum_layout():
+    coss_sum_layout = [
+           [sg.Text('Cosα + Cosβ')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('b'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return coss_sum_layout
+def coss_razn_layout():
+    coss_razn_layout = [
+           [sg.Text('Cosα - Cosβ')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('b'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return coss_razn_layout
 
 
 # ВСТАВЛЯТЬ СЮДА ВСЕ СПИКИ ПО МЕРЕ ОБНОВЛЕНИЯ!!!!!!!!!!!!!!!!!!!!
