@@ -1,4 +1,4 @@
-﻿import PySimpleGUI as sg #loxxxxqwer1
+﻿import PySimpleGUI as sg 
 import os
 import sys
 # import imp
