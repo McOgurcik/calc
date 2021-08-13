@@ -1,4 +1,4 @@
-﻿import PySimpleGUI as sg 
+﻿import PySimpleGUI as sg
 import os
 import sys
 # import imp
@@ -1266,14 +1266,386 @@ def coss_razn():
           window.close()
           break
 
+def def_plodhadkruga(a):
+    x = math.pi*(a**2)
+    return x
+def plodhadkruga():
+    while True:
+     window = sg.Window('Площадь Круга S=π*r^2', l.plodhadkruga_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
 
 
 
 
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
 
 
 
 
+         a = values[0]
+
+         a = float(a)
+
+         try:
+             window.close()
+             return def_plodhadkruga(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+
+def def_plodhadgerron(a,b,c):
+    p = (a+b+c)/2
+    x = (p*((p-a)*(p-b)*(p-c)))**0.5
+    del p
+    return x
+
+def plodhadgerron():
+    while True:
+     window = sg.Window('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5', l.plodhadgerron_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+         c = values[2]
+         a = float(a)
+         b = float(b)
+         c = float(c)
+
+         try:
+             window.close()
+             return def_plodhadgerron(a,b,c)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plodhadprugol(a,b):
+    x = a*b
+    return x
+def plodhadprugol():
+    while True:
+     window = sg.Window('Площадь Прямоугольника S=ab', l.plodhadprugol_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_plodhadprugol(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plodhadparugol(a,b,c):
+    x = (a*b)*math.sin(c)
+    return x
+def plodhadparugol():
+    while True:
+     window = sg.Window('Площадь параллелограмма через стороны и угол S=ab*Sinα', l.plodhadparugol_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+         c = values[2]
+         a = float(a)
+         b = float(b)
+         c = float(c)
+
+         try:
+             window.close()
+             return def_plodhadparugol(a,b,c)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plodhadtrap(a,b,c):
+    x = (a+b)/2*c
+    return x
+def plodhadtrap():
+    while True:
+     window = sg.Window('Площадь трапеции через основания и высоту S=(a+b)/2*h', l.plodhadtrap_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+         c = values[2]
+         a = float(a)
+         b = float(b)
+         c = float(c)
+
+         try:
+             window.close()
+             return def_plodhadtrap(a,b,c)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plodhadromb(a,b):
+    x = a**2*math.sin(b)
+    return x
+def plodhadromb():
+    while True:
+     window = sg.Window('Площадь ромба по стороне и углу a^2*Sinα', l.plodhadromb_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_plodhadromb(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plodhadmnugol(a,b):
+    t = 180/b
+    t = math.radians(t)
+    x = (b*(a**2))/(4*math.tan(t))
+    del t
+    return x
+def plodhadmnugol():
+    while True:
+     window = sg.Window('Формула площади правильного многоугольника', l.plodhadmnugol_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_plodhadmnugol(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_radians(a):
+    x = math.radians(a)
+    return x
+def radians():
+    while True:
+     window = sg.Window('Перевод из градусов в радианы', l.radians_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_radians(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_degrees(a):
+    x = math.degrees(a)
+    return x 
+def degrees():
+    while True:
+     window = sg.Window('Перевод из радиан в градусы', l.degrees_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_degrees(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
 def author():
      window = sg.Window('author', l.author_layout())
      while True:
@@ -1359,6 +1731,41 @@ def Main(a):
            window.close()
            winsound.PlaySound("ButtonClick.wav", 1)
            otvet(ploshadtriugolnika())
+           break
+       if event == 'Площадь Круга S=π*r^2':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadkruga())
+           break
+       if event == 'Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadgerron())
+           break
+       if event == 'Площадь Прямоугольника S=ab':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadprugol())
+           break
+       if event == 'Площадь параллелограмма через стороны и угол S=ab*Sinα':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadparugol())
+           break
+       if event == 'Площадь трапеции через основания и высоту S=(a+b)/2*h':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadtrap())
+           break
+       if event == 'Площадь ромба по стороне и углу a^2*Sinα':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadromb())
+           break
+       if event == 'Формула площади правильного многоугольника':
+           window.close()
+           winsound.PlaySound("ButtonClick.wav", 1)
+           otvet(plodhadmnugol())
            break
        if event == 'Квадратное уравнение по дискриминанту':
            window.close()
@@ -1479,6 +1886,16 @@ def Main(a):
           window.close()
           winsound.PlaySound("ButtonClick.wav", 1)
           otvet(coss_razn())
+          break
+       if event == 'Перевод из градусов в радианы':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(radians())
+          break
+       if event == 'Перевод из радиан в градусы':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(degrees())
           break
 
 

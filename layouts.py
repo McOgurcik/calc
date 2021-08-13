@@ -4,10 +4,11 @@ def author_layout():
     author_layout = [[sg.T('ку')],[sg.Button(image_data=images.mccree)]]
     return author_layout
 def tab2_layout_1():
-    tab2_layout_1 = [[sg.Button('Площадь Прямоугольного треугольника S=a*b*0.5')]]
+    tab2_layout_1 = [[sg.Button('Площадь Прямоугольного треугольника S=a*b*0.5'),sg.Button('Площадь Прямоугольника S=ab')],[sg.Button('Площадь Круга S=π*r^2'),sg.Button('Площадь параллелограмма через стороны и угол S=ab*Sinα')],
+    [sg.Button('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5',size=(35,2)),sg.Button('Площадь трапеции через основания и высоту S=(a+b)/2*h')],[sg.Button('Площадь ромба по стороне и углу a^2*Sinα'),sg.Button('Формула площади правильного многоугольника')]]
     return  tab2_layout_1
 def tab2_layout_2():
-    tab2_layout_2 = [[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α')]]
+    tab2_layout_2 = [[sg.Text('Эти формулы принимают только радианные значения!')],[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α'),sg.Button('Перевод из градусов в радианы'),sg.Button('Перевод из радиан в градусы')]]
     return tab2_layout_2
 def tab2_layout_3():
     tab2_layout_3 = [[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5')]]
@@ -23,7 +24,7 @@ def s_umn_layout():
                ]
     return s_umn_layout
 def pr_rash_layout():
-    pr_rash_layout = [[sg.Button('log'),sg.Button('arccos'),sg.Button('arcsin'),sg.Button('arctan')],[sg.Button('cos'),sg.Button('sin'),sg.Button('tan')]
+    pr_rash_layout = [[sg.Text('Тригонометрические формулы принимают только радианные значения!')],[sg.Button('log'),sg.Button('arccos'),sg.Button('arcsin'),sg.Button('arctan')],[sg.Button('cos'),sg.Button('sin'),sg.Button('tan')]
     ]
     return pr_rash_layout
 def tab1_layout():
@@ -250,8 +251,69 @@ def coss_razn_layout():
            [sg.Text('b'), sg.InputText(0)],
            [sg.Button('Рассчитать'), sg.Button('Cancel')]]
     return coss_razn_layout
-
-
+def plodhadkruga_layout():
+    plodhadkruga_layout = [
+           [sg.Text('Площадь Круга S=π*r^2')],
+           [sg.Text('r-радиус'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadkruga_layout
+def plodhadgerron_layout():
+    plodhadgerron_layout =  [
+                    [sg.Text('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5')],
+                    [sg.Text('a'), sg.InputText(0)],
+                    [sg.Text('b'), sg.InputText(0)],
+                    [sg.Text('c'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadgerron_layout
+def plodhadprugol_layout():
+    plodhadprugol_layout = [
+           [sg.Text('Площадь Прямоугольника S=ab')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('b'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadprugol_layout
+def plodhadparugol_layout():
+    plodhadparugol_layout =  [
+                    [sg.Text('Площадь параллелограмма через стороны и угол S=ab*Sinα')],
+                    [sg.Text('a'), sg.InputText(0)],
+                    [sg.Text('b'), sg.InputText(0)],
+                    [sg.Text('Уголα'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadparugol_layout
+def plodhadtrap_layout():
+    plodhadtrap_layout =  [
+                    [sg.Text('Площадь трапеции через основания и высоту S=(a+b)/2*h')],
+                    [sg.Text('a'), sg.InputText(0)],
+                    [sg.Text('b'), sg.InputText(0)],
+                    [sg.Text('h'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadtrap_layout
+def plodhadromb_layout():
+    plodhadromb_layout = [
+           [sg.Text('Площадь ромба по стороне и углу a^2*Sinα')],
+           [sg.Text('a'), sg.InputText(0)],
+           [sg.Text('Уголα'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadromb_layout
+def plodhadmnugol_layout():
+    plodhadmnugol_layout = [
+           [sg.Text('Формула площади правильного многоугольника')],
+           [sg.Text('Сторона a'), sg.InputText(0)],
+           [sg.Text('Кол-во сторон'), sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plodhadmnugol_layout
+def radians_layout():
+    radians_layout = [
+           [sg.Text('Перевод из градусов в радианы')],
+           [sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return radians_layout
+def degrees_layout():
+    degrees_layout = [
+           [sg.Text('Перевод из радиан в градусы')],
+           [sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return degrees_layout
 # ВСТАВЛЯТЬ СЮДА ВСЕ СПИКИ ПО МЕРЕ ОБНОВЛЕНИЯ!!!!!!!!!!!!!!!!!!!!
 #
 #
@@ -271,3 +333,5 @@ def layout123():
 #
 #             [[sg.Menu(menu_def)]]]
 # Create the Window
+if __name__ == '__main__':
+    print('Пожалуйста запустите исполнительный файл')
