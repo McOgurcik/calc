@@ -1573,7 +1573,7 @@ def radians():
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
-         # os.execl(sys.executable, sys.executable, *sys.argv)
+         # os.execl(sys.executable, sys.executable, *sys.argv) 
          window.close()
          return('Отменено')
 
@@ -1607,7 +1607,7 @@ def radians():
          break
 def def_degrees(a):
     x = math.degrees(a)
-    return x 
+    return x
 def degrees():
     while True:
      window = sg.Window('Перевод из радиан в градусы', l.degrees_layout())
