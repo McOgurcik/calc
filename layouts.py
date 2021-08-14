@@ -88,7 +88,7 @@ def log_layout():
     return log_layout
 # layout_otvet = [[sg.InputText(a)]]
 def inf_layout():
-    inf_layout = []
+    inf_layout = [[sg.Button('Мощность алфавита N = 2^i'),sg.Button('Кол-во информации I = K * i')],[sg.Button('Кол-во разных сообщений Q = N^L'),sg.Button('Формула Хартли: I = log2 N')],[sg.Button('Перевод любого числа любой системы счисления в любую другую')]]
     return inf_layout
 def fuz_layout():
     fuz_layout = []
@@ -374,7 +374,40 @@ def plpovshar_layout():
                     [sg.Text('R'), sg.InputText(0)],
                     [sg.Button('Рассчитать'), sg.Button('Cancel')]]
     return plpovshar_layout
-
+def alfabet_layout():
+    alfabet_layout =  [
+                    [sg.Text('Мощность алфавита N = 2^i')],
+                    [sg.Text('i'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return alfabet_layout
+def kolinfo_layout():
+    kolinfo_layout =  [
+                    [sg.Text('Кол-во информации I = K * i')],
+                    [sg.Text('K - число символов в сообщении'), sg.InputText(0)],
+                    [sg.Text('i - информационный вес символа'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return kolinfo_layout
+def kolsoob_layout():
+    kolsoob_layout =  [
+                    [sg.Text('Кол-во разных сообщений Q = N^L')],
+                    [sg.Text('N - количество символов'), sg.InputText(0)],
+                    [sg.Text('L - длина сообщения'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return kolsoob_layout
+def hartl_layout():
+    hartl_layout =  [
+                    [sg.Text('Формула Хартли: I = log2 N')],
+                    [sg.Text('N'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return hartl_layout
+def convert_base_layout():
+    convert_base_layout =  [
+                    [sg.Text('Перевод любого числа любой системы счисления в любую другую')],
+                    [sg.Text('Число'), sg.InputText(0)],
+                    [sg.Text('Исходная система счисления'), sg.InputText(10)],
+                    [sg.Text('Конечная система счисления'), sg.InputText(10)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return convert_base_layout
 # ВСТАВЛЯТЬ СЮДА ВСЕ СПИКИ ПО МЕРЕ ОБНОВЛЕНИЯ!!!!!!!!!!!!!!!!!!!!
 #
 #

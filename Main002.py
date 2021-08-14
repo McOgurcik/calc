@@ -2027,6 +2027,225 @@ def plpovshar():
             return('Ошибка')
          window.close()
          break
+def def_alfabet(a):
+    x = 2**a
+    return x
+def alfabet():
+    while True:
+     window = sg.Window('Мощность алфавита N = 2^i', l.alfabet_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_alfabet(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_kolinfo(a,b):
+    x = a*b
+    return x
+def kolinfo():
+    while True:
+     window = sg.Window('Кол-во информации I = K * i', l.kolinfo_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+         try:
+             window.close()
+             return def_kolinfo(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+
+def def_kolsoob(a,b):
+    x = a**b
+    return x
+
+def kolsoob():
+    while True:
+     window = sg.Window('Кол-во разных сообщений Q = N^L', l.kolsoob_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+         try:
+             window.close()
+             return def_kolsoob(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_hartl(a):
+    x = math.log2(a)
+    return x
+def hartl():
+    while True:
+     window = sg.Window('Формула Хартли: I = log2 N', l.hartl_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_hartl(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_convert_base(a,b,c):
+    num = a
+    from_base = int(b)
+    to_base = int(c)
+
+    # (num, from_base=10, to_base=10)
+    # first convert to decimal number
+    n = int(num, from_base) if isinstance(num, str) else num
+    # now convert decimal to 'to_base' base
+    alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    res = ""
+    while n > 0:
+        n,m = divmod(n, to_base)
+        res += alphabet[m]
+    return res[::-1]
+def convert_base():
+    while True:
+     window = sg.Window('Перевод любого числа любой системы счисления в любую другую', l.convert_base_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+         c = values[2]
+
+
+         try:
+             window.close()
+             return def_convert_base(a,b,c)
+         except:
+             window.close()
+             return('Ошибка')
+         window.close()
+         break
+
 def author():
      window = sg.Window('author', l.author_layout())
      while True:
@@ -2323,7 +2542,31 @@ def Main(a):
           winsound.PlaySound("ButtonClick.wav", 1)
           otvet(plpovshar())
           break
-
+       if event == 'Мощность алфавита N = 2^i':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(alfabet())
+          break
+       if event == 'Кол-во информации I = K * i':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(kolinfo())
+          break
+       if event == 'Кол-во разных сообщений Q = N^L':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(kolsoob())
+          break
+       if event == 'Формула Хартли: I = log2 N':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(hartl())
+          break
+       if event == 'Перевод любого числа любой системы счисления в любую другую':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(convert_base())
+          break
 
 
 
