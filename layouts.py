@@ -11,7 +11,7 @@ def tab2_layout_2():
     tab2_layout_2 = [[sg.Text('Эти формулы принимают только радианные значения!')],[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α'),sg.Button('Перевод из градусов в радианы'),sg.Button('Перевод из радиан в градусы')]]
     return tab2_layout_2
 def tab2_layout_3():
-    tab2_layout_3 = [[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5')]]
+    tab2_layout_3 = [[sg.Button('Площадь поверхности Куба 6a^2'),sg.Button('Длина диагонали куба')],[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5'),sg.Button('Площадь поверхности параллелепипеда')],[sg.Button('Объём цилиндра πR^2h'),sg.Button('Площадь поверхности цилиндра')],[sg.Button('Объём конуса'),sg.Button('Площадь поверхности конуса')],[sg.Button('Объём шара'),sg.Button('Площадь поверхности шара')]]
     return tab2_layout_3
 def kv_ur_layout():
     kv_ur_layout = [[sg.Button('Квадратное уравнение по дискриминанту')], [sg.Button('Квадратное уравнение по теореме Виета')]]
@@ -314,6 +314,67 @@ def degrees_layout():
            [sg.InputText(0)],
            [sg.Button('Рассчитать'), sg.Button('Cancel')]]
     return degrees_layout
+def plpovkuba_layout():
+    plpovkuba_layout = [
+           [sg.Text('Площадь поверхности Куба 6a^2')],
+           [sg.Text('Ребро a'),sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plpovkuba_layout
+def diagkuba_layout():
+    diagkuba_layout = [
+           [sg.Text('Длина диагонали куба')],
+           [sg.Text('Ребро a'),sg.InputText(0)],
+           [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return diagkuba_layout
+def plpovpar_layout():
+    plpovpar_layout =  [
+                    [sg.Text('Площадь поверхности параллелепипеда')],
+                    [sg.Text('a'), sg.InputText(0)],
+                    [sg.Text('b'), sg.InputText(0)],
+                    [sg.Text('c'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plpovpar_layout
+def obcil_layout():
+    obcil_layout =  [
+                    [sg.Text('Объём цилиндра πR^2h')],
+                    [sg.Text('R-радиус основания'), sg.InputText(0)],
+                    [sg.Text('h-высота'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return obcil_layout
+def plpovcil_layout():
+    plpovcil_layout =  [
+                    [sg.Text('Площадь поверхности цилиндра')],
+                    [sg.Text('R-радиус основания'), sg.InputText(0)],
+                    [sg.Text('h-высота'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plpovcil_layout
+def obkon_layout():
+    obkon_layout =  [
+                    [sg.Text('Объём конуса')],
+                    [sg.Text('R-радиус основания'), sg.InputText(0)],
+                    [sg.Text('h-высота'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return obkon_layout
+def plpovkon_layout():
+    plpovkon_layout =  [
+                    [sg.Text('Площадь поверхности конуса')],
+                    [sg.Text('R-радиус основания'), sg.InputText(0)],
+                    [sg.Text('h-высота'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plpovkon_layout
+def obshar_layout():
+    obshar_layout =  [
+                    [sg.Text('Объём шара')],
+                    [sg.Text('R'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return obshar_layout
+def plpovshar_layout():
+    plpovshar_layout =  [
+                    [sg.Text('Площадь поверхности шара')],
+                    [sg.Text('R'), sg.InputText(0)],
+                    [sg.Button('Рассчитать'), sg.Button('Cancel')]]
+    return plpovshar_layout
+
 # ВСТАВЛЯТЬ СЮДА ВСЕ СПИКИ ПО МЕРЕ ОБНОВЛЕНИЯ!!!!!!!!!!!!!!!!!!!!
 #
 #

@@ -1394,6 +1394,7 @@ def plodhadprugol():
          window.close()
          break
 def def_plodhadparugol(a,b,c):
+    c = math.radians(c)
     x = (a*b)*math.sin(c)
     return x
 def plodhadparugol():
@@ -1478,6 +1479,7 @@ def plodhadtrap():
          window.close()
          break
 def def_plodhadromb(a,b):
+    b = math.radians(b)
     x = a**2*math.sin(b)
     return x
 def plodhadromb():
@@ -1573,7 +1575,7 @@ def radians():
      event, values = window.read()
      print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
-         # os.execl(sys.executable, sys.executable, *sys.argv) 
+         # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
          return('Отменено')
 
@@ -1641,6 +1643,385 @@ def degrees():
          try:
              window.close()
              return def_degrees(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+
+def def_plpovkuba(a):
+    x = a**2*6
+    return x
+def plpovkuba():
+    while True:
+     window = sg.Window('Площадь поверхности Куба 6a^2', l.plpovkuba_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_plpovkuba(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_diagkuba(a):
+    x = a * (3**0.5)
+    return x
+def diagkuba():
+    while True:
+     window = sg.Window('Длина диагонали куба', l.diagkuba_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_diagkuba(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plpovpar(a,b,c):
+    x = (2*a*b)+(2*a*c)+(2*b*c)
+    return x
+def plpovpar():
+    while True:
+     window = sg.Window('Площадь поверхности параллелепипеда', l.plpovpar_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+         c = values[2]
+
+         a = float(a)
+         b = float(b)
+         c = float(c)
+
+         try:
+             window.close()
+             return def_plpovpar(a,b,c)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_obcil(a,b):
+    x = math.pi*(a**2)*b
+    return x
+def obcil():
+    while True:
+     window = sg.Window('Объём цилиндра πR^2h', l.obcil_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_obcil(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plpovcil(a,b):
+    x = (2*math.pi*(a**2))+(2*math.pi*a*b)
+    return x
+def plpovcil():
+    while True:
+     window = sg.Window('Площадь поверхности цилиндра', l.plpovcil_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_plpovcil(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_obkon(a,b):
+    x = (math.pi*(a**2))/3*b
+    return x
+def obkon():
+    while True:
+     window = sg.Window('Объём конуса', l.obkon_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_obkon(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+
+def def_plpovkon(a,b):
+    l = ((a**2)+(b**2))**0.5
+    x = math.pi*(a**2)+math.pi*a*l
+    del l
+    return x
+def plpovkon():
+    while True:
+     window = sg.Window('Площадь поверхности конуса', l.plpovkon_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+         b = values[1]
+
+         a = float(a)
+         b = float(b)
+
+
+         try:
+             window.close()
+             return def_plpovkon(a,b)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_obshar(a):
+    x = math.pi*(a**3)/3*4
+    return x
+def obshar():
+    while True:
+     window = sg.Window('Объём шара', l.obshar_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_obshar(a)
+         except:
+            window.close()
+            return('Ошибка')
+         window.close()
+         break
+def def_plpovshar(a):
+    x = 4*math.pi*(a**2)
+    return x
+def plpovshar():
+    while True:
+     window = sg.Window('Площадь поверхности шара', l.plpovshar_layout())
+     event, values = window.read()
+     print(event, values)
+     if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+         # os.execl(sys.executable, sys.executable, *sys.argv)
+         window.close()
+         return('Отменено')
+
+
+
+
+     if event == 'Рассчитать':
+
+         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+
+             # os.execl(sys.executable, sys.executable, *sys.argv)
+             window.close()
+             return('Отменено')
+
+
+
+
+         a = values[0]
+
+
+         a = float(a)
+
+
+         try:
+             window.close()
+             return def_plpovshar(a)
          except:
             window.close()
             return('Ошибка')
@@ -1897,6 +2278,52 @@ def Main(a):
           winsound.PlaySound("ButtonClick.wav", 1)
           otvet(degrees())
           break
+       if event == 'Площадь поверхности Куба 6a^2':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(plpovkuba())
+          break
+       if event == 'Длина диагонали куба':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(diagkuba())
+          break
+       if event == 'Площадь поверхности параллелепипеда':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(plpovpar())
+          break
+       if event == 'Объём цилиндра πR^2h':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(obcil())
+          break
+       if event == 'Площадь поверхности цилиндра':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(plpovcil())
+          break
+       if event == 'Объём конуса':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(obkon())
+          break
+       if event == 'Площадь поверхности конуса':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(plpovkon())
+          break
+       if event == 'Объём шара':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(obshar())
+          break
+       if event == 'Площадь поверхности шара':
+          window.close()
+          winsound.PlaySound("ButtonClick.wav", 1)
+          otvet(plpovshar())
+          break
+
 
 
 
