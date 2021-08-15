@@ -8,7 +8,7 @@ def tab2_layout_1():
     [sg.Button('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5',size=(35,2)),sg.Button('Площадь трапеции через основания и высоту S=(a+b)/2*h')],[sg.Button('Площадь ромба по стороне и углу a^2*Sinα'),sg.Button('Формула площади правильного многоугольника')]]
     return  tab2_layout_1
 def tab2_layout_2():
-    tab2_layout_2 = [[sg.Text('Эти формулы принимают только радианные значения!')],[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α'),sg.Button('Перевод из градусов в радианы'),sg.Button('Перевод из радиан в градусы')]]
+    tab2_layout_2 = [[sg.Text('Эти формулы принимают только градусные значения!')],[sg.Button('Sin(α+β)'),sg.Button('Sin(α-β)'),sg.Button('sin2α'),sg.Button('Sinα + Sinβ'),sg.Button('Sinα - Sinβ')],[sg.Button('Cos(α+β)'),sg.Button('Cos(α-β)'),sg.Button('cos2α'),sg.Button('Cosα + Cosβ'),sg.Button('Cosα - Cosβ')],[sg.Button('tg(α+β)'),sg.Button('tg(α-β)'),sg.Button('tg2α'),sg.Button('Перевод из градусов в радианы'),sg.Button('Перевод из радиан в градусы')]]
     return tab2_layout_2
 def tab2_layout_3():
     tab2_layout_3 = [[sg.Button('Площадь поверхности Куба 6a^2'),sg.Button('Длина диагонали куба')],[sg.Button('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5'),sg.Button('Площадь поверхности параллелепипеда')],[sg.Button('Объём цилиндра πR^2h'),sg.Button('Площадь поверхности цилиндра')],[sg.Button('Объём конуса'),sg.Button('Площадь поверхности конуса')],[sg.Button('Объём шара'),sg.Button('Площадь поверхности шара')]]
@@ -24,7 +24,7 @@ def s_umn_layout():
                ]
     return s_umn_layout
 def pr_rash_layout():
-    pr_rash_layout = [[sg.Text('Тригонометрические формулы принимают только радианные значения!')],[sg.Button('log'),sg.Button('arccos'),sg.Button('arcsin'),sg.Button('arctan')],[sg.Button('cos'),sg.Button('sin'),sg.Button('tan')]
+    pr_rash_layout = [[sg.Text('Тригонометрические формулы принимают только градусные значения!')],[sg.Button('log'),sg.Button('arccos'),sg.Button('arcsin'),sg.Button('arctan')],[sg.Button('cos'),sg.Button('sin'),sg.Button('tan')]
     ]
     return pr_rash_layout
 def tab1_layout():

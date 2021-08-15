@@ -497,11 +497,11 @@ def log():
           window.close()
           break
 def def_Sin_sum(a,b):
-    try:
-        x = (math.sin(float(a))*math.cos(float(b)))+((math.cos(float(a))*math.sin(float(b))))
-        return (x)
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    x = (math.sin(float(a))*math.cos(float(b)))+((math.cos(float(a))*math.sin(float(b))))
+    return (x)
+
 
 def Sin_sum():
      while True:
@@ -539,10 +539,9 @@ def Sin_sum():
           window.close()
           break
 def def_arccos(a):
-    try:
-        return (math.acos(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.acos(float(a)))
 
 def arccos():
     while True:
@@ -579,10 +578,9 @@ def arccos():
           window.close()
           break
 def def_arcsin(a):
-    try:
-        return (math.asin(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.asin(float(a)))
 def arcsin():
     while True:
       window = sg.Window('arcsin', l.arcsin_layout())
@@ -618,10 +616,9 @@ def arcsin():
           window.close()
           break
 def def_arctan(a):
-    try:
-        return (math.atan(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.atan(float(a)))
 def arctan():
     while True:
       window = sg.Window('arctan', l.arctan_layout())
@@ -658,10 +655,9 @@ def arctan():
           break
 
 def def_sin(a):
-    try:
-        return (math.sin(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.sin(float(a)))
 def sin():
     while True:
       window = sg.Window('sin', l.sin_layout())
@@ -698,10 +694,9 @@ def sin():
           break
 
 def def_cos(a):
-    try:
-        return (math.cos(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.cos(float(a)))
 def cos():
     while True:
       window = sg.Window('cos', l.cos_layout())
@@ -738,10 +733,10 @@ def cos():
           break
 
 def def_tan(a):
-    try:
-        return (math.tan(float(a)))
-    except:
-         return('Ошибка')
+    a = float(a)
+    a = math.radians(a)
+    return (math.tan(float(a)))
+
 def tan():
     while True:
       window = sg.Window('tan', l.tan_layout())
@@ -780,11 +775,13 @@ def tan():
 
 
 def def_Sin_razn(a,b):
-    try:
-        x = (math.sin(float(a))*math.cos(float(b)))-((math.cos(float(a))*math.sin(float(b))))
-        return (x)
-    except:
-         return('Ошибка')
+    a = float(a)
+    b = float(b)
+    a = math.radians(a)
+    b = math.radians(b)
+    x = (math.sin(float(a))*math.cos(float(b)))-((math.cos(float(a))*math.sin(float(b))))
+    return (x)
+
 
 def Sin_razn():
      while True:
@@ -825,11 +822,13 @@ def Sin_razn():
 
 
 def def_Cos_sum(a,b):
-    try:
-        x = (math.cos(float(a))*math.cos(float(b)))-(math.cos(float(a))*math.cos(float(b)))
-        return (x)
-    except:
-         return('Ошибка')
+    a = float(a)
+    b = float(b)
+    a = math.radians(a)
+    b = math.radians(b)
+    x = (math.cos(float(a))*math.cos(float(b)))-(math.sin(float(a))*math.sin(float(b)))
+    return (x)
+
 
 def Cos_sum():
      while True:
@@ -868,11 +867,12 @@ def Cos_sum():
           break
 
 def def_Cos_razn(a,b):
-    try:
-        x = (math.cos(float(a))*math.cos(float(b)))+(math.cos(float(a))*math.cos(float(b)))
-        return (x)
-    except:
-         return('Ошибка')
+    a = float(a)
+    b = float(b)
+    a = math.radians(a)
+    b = math.radians(b)
+    x = (math.cos(float(a))*math.cos(float(b)))+(math.cos(float(a))*math.cos(float(b)))
+    return x
 
 def Cos_razn():
      while True:
@@ -901,16 +901,20 @@ def Cos_razn():
           a = values[0]
           b = values[1]
 
-          try:
-              window.close()
-              return def_Cos_razn(a,b)
-          except:
-             window.close()
-             return('Ошибка')
+          # try:
+          window.close()
+          return def_Cos_razn(a,b)
+          # except:
+          #    window.close()
+          #    return('Ошибка')
           window.close()
           break
 
 def def_tg_sum(a,b):
+    a = float(a)
+    b = float(b)
+    a = math.radians(a)
+    b = math.radians(b)
     x = (math.tan(float(a))+math.tan(float(b)))/(1-(math.tan(float(a))*math.tan(float(b))))
     return x
 def tg_sum():
@@ -950,6 +954,10 @@ def tg_sum():
           break
 
 def def_tg_razn(a,b):
+    a = float(a)
+    b = float(b)
+    a = math.radians(a)
+    b = math.radians(b)
     x = (math.tan(float(a))-math.tan(float(b)))/(1+(math.tan(float(a))*math.tan(float(b))))
     return x
 
@@ -989,6 +997,8 @@ def tg_razn():
           window.close()
           break
 def def_sin2a(a):
+    a = float(a)
+    a = math.radians(a)
     x = (2*math.sin(float(a)))*math.cos(float(a))
     return x
 def sin2a():
@@ -1028,6 +1038,8 @@ def sin2a():
          window.close()
          break
 def def_cos2a(a):
+    a = float(a)
+    a = math.radians(a)
     x = (math.cos(a)**2)-(math.sin(a)**2)
     return x
 def cos2a():
@@ -1067,6 +1079,7 @@ def cos2a():
          window.close()
          break
 def def_tg2a(a):
+    a = math.radians(a)
     x = (2*math.tan(a))/(1-(math.tan(a)**2))
     return x
 def tg2a():
@@ -1106,6 +1119,8 @@ def tg2a():
          window.close()
          break
 def def_sins_sum(a,b):
+    a = math.radians(a)
+    b = math.radians(b)
     x = ((2*math.sin((a+b)/2))*(math.cos((a-b)/2)))
     return x
 def sins_sum():
@@ -1146,6 +1161,8 @@ def sins_sum():
           break
 
 def def_sins_razn(a,b):
+    a = math.radians(a)
+    b = math.radians(b)
     x = ((2*math.sin((a-b)/2))*(math.cos((a+b)/2)))
     return x
 def sins_razn():
@@ -1187,6 +1204,8 @@ def sins_razn():
           break
 
 def def_coss_sum(a,b):
+    a = math.radians(a)
+    b = math.radians(b)
     x = ((2*math.cos((a+b)/2))*(math.cos((a-b)/2)))
     return x
 def coss_sum():
@@ -1227,6 +1246,8 @@ def coss_sum():
           break
 
 def def_coss_razn(a,b):
+    a = math.radians(a)
+    b = math.radians(b)
     x = ((2*math.sin((a-b)/2))*(math.sin((a+b)/2)))
     return x
 def coss_razn():
