@@ -901,12 +901,12 @@ def Cos_razn():
           a = values[0]
           b = values[1]
 
-          # try:
-          window.close()
-          return def_Cos_razn(a,b)
-          # except:
-          #    window.close()
-          #    return('Ошибка')
+          try:
+             window.close()
+             return def_Cos_razn(a,b)
+          except:
+             window.close()
+             return('Ошибка')
           window.close()
           break
 
