@@ -414,7 +414,7 @@ def convert_base_layout():
 #
 #
 def layout_all():
-    layout_all = [tab2_layout_1(), tab2_layout_2(), kv_ur_layout(), s_umn_layout(), tab1_layout(), tab2_layout(), summakvadrata_layout(), raznostkvadrata_layout(), summakuba_layout(), raznostkuba_layout(), raznostkubov_layout (), ploshadtriugolnika_layout (), inf_layout(), fuz_layout(),kv_ur_dis_layout(), layout(), menu_def()]
+    layout_all = [tab2_layout_1(), tab2_layout_2(), kv_ur_layout(), s_umn_layout(), tab1_layout(), tab2_layout(), summakvadrata_layout(), raznostkvadrata_layout(), summakuba_layout(), raznostkuba_layout(), raznostkubov_layout (), ploshadtriugolnika_layout (), inf_layout(), fuz_layout(),kv_ur_dis_layout(), menu_def()]
     return layout_all
 def layout123():
     layout123 = [[sg.Button('Print')],

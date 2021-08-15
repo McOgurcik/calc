@@ -6,6 +6,7 @@ import sys
 import math
 import winsound
 import images
+import images as i
 import layouts as l
 # import webbrowser ля интеграции веб ссылок  [sg.Text('www.PySimpleGUI.org', font='default 12 underline', text_color='blue', enable_events=True, key='-LINK-')],
 #elif event == '-LINK-':
@@ -16,12 +17,12 @@ import layouts as l
 x = 0
 
 a = 1
-main_exit = None
+
 cursors = ('X_cursor', 'no', 'arrow','based_arrow_down','based_arrow_up','boat','bogosity','bottom_left_corner','bottom_right_corner','bottom_side','bottom_tee','box_spiral','center_ptr','circle','clock','coffee_mug','cross','cross_reverse','crosshair','diamond_cross','dot','dotbox','double_arrow','draft_large','draft_small','draped_box','exchange','fleur','gobbler','gumby','hand1','hand2','heart','icon','iron_cross','left_ptr','left_side','left_tee','leftbutton','ll_angle','lr_angle','man','middlebutton','mouse','no','pencil','pirate','plus','question_arrow','right_ptr','right_side','right_tee','rightbutton','rtl_logo','sailboat','sb_down_arrow','sb_h_double_arrow','sb_left_arrow','sb_right_arrow','sb_up_arrow','sb_v_double_arrow','shuttle','sizing','spider','spraycan','star','target','tcross','top_left_arrow','top_left_corner','top_right_corner','top_side','top_tee','trek','ul_angle','umbrella','ur_angle','watch','xterm','arrow','center_ptr','crosshair','fleur','ibeam','icon','sb_h_double_arrow','sb_v_double_arrow','watch','xterm','no','starting','size','size_ne_sw','size_ns','size_nw_se','size_we','uparrow','wait','arrow','cross','crosshair','ibeam','plus','watch','xterm')
 
 event, values = 0, 0
 
-print = sg.Print
+# print = sg.Print =======================================================================================
 # sg.theme('Black')
 # event, values = sg.Window('Где файл сука?', [[sg.Text('Filename')], [sg.Input(), sg.FileBrowse()], [sg.OK(), sg.Cancel()] ]).read(close=True)
 sg.theme('DefaultNoMoreNagging')   # Add a touch of color
@@ -67,7 +68,7 @@ def summakvadrata():
    while True:
      window = sg.Window('Квадрат суммы (a+b)^2', l.summakvadrata_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
 
@@ -107,7 +108,7 @@ def raznostkvadrata():
     while True:
       window = sg.Window('Квадрат разности (a-b)^2', l.raznostkvadrata_layout())
       event, values = window.read()
-      print(event, values)
+      # print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -146,7 +147,7 @@ def summakuba():
     while True:
       window = sg.Window('Сумма куба (a-b)^3', l.summakuba_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -186,7 +187,7 @@ def raznostkuba():
     while True:
       window = sg.Window('Разность куба (a-b)^3', l.raznostkuba_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -225,7 +226,7 @@ def raznostkubov():
     while True:
       window = sg.Window('Разность кубов a^2-b^2', l.raznostkubov_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -263,7 +264,7 @@ def ploshadtriugolnika():
     while True:
       window = sg.Window('Площадь Прямоугольного треугольника S=a*b*0.5', l.ploshadtriugolnika_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -316,7 +317,7 @@ def kv_ur_dis():
     while True:
       window = sg.Window('Квадратное уравнение по дискриминанту', l.kv_ur_dis_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -379,7 +380,7 @@ def kv_ur_vi():
     while True:
       window = sg.Window('Квадратное уравнение по теореме Виета', l.kv_ur_vi_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -420,7 +421,7 @@ def diag_paralel():
     while True:
       window = sg.Window('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5', l.diag_paralel_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -465,7 +466,7 @@ def log():
     while True:
       window = sg.Window('log', l.log_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -507,7 +508,7 @@ def Sin_sum():
      while True:
       window = sg.Window('Sin(α+β)', l.Sin_sum_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -547,7 +548,7 @@ def arccos():
     while True:
       window = sg.Window('arccos', l.arccos_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -585,7 +586,7 @@ def arcsin():
     while True:
       window = sg.Window('arcsin', l.arcsin_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -623,7 +624,7 @@ def arctan():
     while True:
       window = sg.Window('arctan', l.arctan_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -662,7 +663,7 @@ def sin():
     while True:
       window = sg.Window('sin', l.sin_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -701,7 +702,7 @@ def cos():
     while True:
       window = sg.Window('cos', l.cos_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -741,7 +742,7 @@ def tan():
     while True:
       window = sg.Window('tan', l.tan_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -787,7 +788,7 @@ def Sin_razn():
      while True:
       window = sg.Window('Sin(α-β)', l.Sin_razn_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -834,7 +835,7 @@ def Cos_sum():
      while True:
       window = sg.Window('Cos(α+β)', l.Cos_sum_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -878,7 +879,7 @@ def Cos_razn():
      while True:
       window = sg.Window('Cos(α-β)', l.Cos_razn_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -921,7 +922,7 @@ def tg_sum():
      while True:
       window = sg.Window('tg(α+β)', l.tg_sum_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -965,7 +966,7 @@ def tg_razn():
      while True:
       window = sg.Window('tg(α-β)', l.tg_razn_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -1005,7 +1006,7 @@ def sin2a():
     while True:
      window = sg.Window('sin2α', l.sin2a_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1046,7 +1047,7 @@ def cos2a():
     while True:
      window = sg.Window('cos2α', l.cos2a_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1086,7 +1087,7 @@ def tg2a():
     while True:
      window = sg.Window('tg2α', l.tg2a_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1127,7 +1128,7 @@ def sins_sum():
      while True:
       window = sg.Window('Sinα + Sinβ', l.sins_sum_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -1169,7 +1170,7 @@ def sins_razn():
      while True:
       window = sg.Window('Sinα - Sinβ', l.sins_razn_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -1212,7 +1213,7 @@ def coss_sum():
      while True:
       window = sg.Window('Cosα + Cosβ', l.coss_sum_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -1254,7 +1255,7 @@ def coss_razn():
      while True:
       window = sg.Window('Cosα - Cosβ', l.coss_razn_layout())
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -1294,7 +1295,7 @@ def plodhadkruga():
     while True:
      window = sg.Window('Площадь Круга S=π*r^2', l.plodhadkruga_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1337,7 +1338,7 @@ def plodhadgerron():
     while True:
      window = sg.Window('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5', l.plodhadgerron_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1379,7 +1380,7 @@ def plodhadprugol():
     while True:
      window = sg.Window('Площадь Прямоугольника S=ab', l.plodhadprugol_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1422,7 +1423,7 @@ def plodhadparugol():
     while True:
      window = sg.Window('Площадь параллелограмма через стороны и угол S=ab*Sinα', l.plodhadparugol_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1464,7 +1465,7 @@ def plodhadtrap():
     while True:
      window = sg.Window('Площадь трапеции через основания и высоту S=(a+b)/2*h', l.plodhadtrap_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1507,7 +1508,7 @@ def plodhadromb():
     while True:
      window = sg.Window('Площадь ромба по стороне и углу a^2*Sinα', l.plodhadromb_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1552,7 +1553,7 @@ def plodhadmnugol():
     while True:
      window = sg.Window('Формула площади правильного многоугольника', l.plodhadmnugol_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1594,7 +1595,7 @@ def radians():
     while True:
      window = sg.Window('Перевод из градусов в радианы', l.radians_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1635,7 +1636,7 @@ def degrees():
     while True:
      window = sg.Window('Перевод из радиан в градусы', l.degrees_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1677,7 +1678,7 @@ def plpovkuba():
     while True:
      window = sg.Window('Площадь поверхности Куба 6a^2', l.plpovkuba_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1718,7 +1719,7 @@ def diagkuba():
     while True:
      window = sg.Window('Длина диагонали куба', l.diagkuba_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1759,7 +1760,7 @@ def plpovpar():
     while True:
      window = sg.Window('Площадь поверхности параллелепипеда', l.plpovpar_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1802,7 +1803,7 @@ def obcil():
     while True:
      window = sg.Window('Объём цилиндра πR^2h', l.obcil_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1844,7 +1845,7 @@ def plpovcil():
     while True:
      window = sg.Window('Площадь поверхности цилиндра', l.plpovcil_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1886,7 +1887,7 @@ def obkon():
     while True:
      window = sg.Window('Объём конуса', l.obkon_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1931,7 +1932,7 @@ def plpovkon():
     while True:
      window = sg.Window('Площадь поверхности конуса', l.plpovkon_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -1973,7 +1974,7 @@ def obshar():
     while True:
      window = sg.Window('Объём шара', l.obshar_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2014,7 +2015,7 @@ def plpovshar():
     while True:
      window = sg.Window('Площадь поверхности шара', l.plpovshar_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2055,7 +2056,7 @@ def alfabet():
     while True:
      window = sg.Window('Мощность алфавита N = 2^i', l.alfabet_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2096,7 +2097,7 @@ def kolinfo():
     while True:
      window = sg.Window('Кол-во информации I = K * i', l.kolinfo_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2139,7 +2140,7 @@ def kolsoob():
     while True:
      window = sg.Window('Кол-во разных сообщений Q = N^L', l.kolsoob_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2180,7 +2181,7 @@ def hartl():
     while True:
      window = sg.Window('Формула Хартли: I = log2 N', l.hartl_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2233,7 +2234,7 @@ def convert_base():
     while True:
      window = sg.Window('Перевод любого числа любой системы счисления в любую другую', l.convert_base_layout())
      event, values = window.read()
-     print(event, values)
+     #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
          # os.execl(sys.executable, sys.executable, *sys.argv)
          window.close()
@@ -2271,7 +2272,7 @@ def author():
      window = sg.Window('author', l.author_layout())
      while True:
       event, values = window.read()
-      print(event, values)
+      #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
           # os.execl(sys.executable, sys.executable, *sys.argv)
           window.close()
@@ -2285,345 +2286,8 @@ def author():
 #
 #              [sg.Menu(menu_def())]]
 #     return layout
-# s=(None, None), auto_size_text=None, click_submits=None, enable_events=False,
+# s=(None, None), auto_size_text=None, click_submits=None, Иenable_events=False,
 #                 font=None, text_color=None, background_color=None, justification=None, pad=None,
 #                 key=None, k=None, right_click_menu=None, tooltip=None, visible=True, metadata=None
-def  window_main(title='Main',size=(1280, 720),s=(None, None), auto_size_text=None, click_submits=None, enable_events=False,font=None, text_color=None,
-                 background_color='y', justification=None, pad=None,key=None, k=None, right_click_menu=None, tooltip=None, visible=True, metadata=None):
-
-     layout = [ [sg.TabGroup([[sg.Tab('Алгебра', l.tab1_layout()), sg.Tab('Геометрия', l.tab2_layout()) , sg.Tab('Информатика', l.inf_layout()) #, sg.Tab('Физика', l.fuz_layout()
-     ]])],
-              [sg.Button('Выход',image_data=None, key='-EXIT-'), sg.Button('debug')],
-             [sg.Menu(l.menu_def())]]
-     return sg.Window(title, layout,size,background_color='#F3FB62',return_keyboard_events=True,finalize=True,right_click_menu=l.right_click_menu_layout(),icon='name.ico')
-recording = have_data = False
-def Main(a):
-    #
-    # if a == 1:
-    #  # if window:
-    #  #     del window;window.close()
-    #
-
-    window = window_main()
-    #     бинды и курсоры здесь!!!!!!
-    #window['Exit'].set_cursor(cursor='no')
-    window['-EXIT-'].set_cursor(cursor='X_cursor')
-    window.bind('<F10>', 'Hard_exit')
-    while True:
-       #window = sg.Window('Main',layout())
-
-       event, values = window.read() #timeout=100
-       # УБРАТЬ print() ПЕРЕД КОМПИЛЯЦИЕЙ!!!!!!!!!!!!!!!!!!
-       print(event, values)
-       if (event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit' or event == '-EXIT-' or event == 'Escape:27') and sg.popup_yes_no('Вы уверены, что хотите выйти?') == 'Yes':
-           global main_exit
-           main_exit = True
-           window.close()
-           break
-       if event == 'Hard_exit':
-           window.close()
-           exit()
-           break
-       if event == 'Квадрат суммы (a+b)^2':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(summakvadrata())
-           break
-       if event == 'Квадрат разности (a-b)^2':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(raznostkvadrata())
-           break
-       if event == 'Куб суммы (a+b)^3':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(summakuba())
-           break
-       if event == 'Куб разности (a+b)^3':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(raznostkuba())
-           break
-       if event == 'Разность кубов a^2-b^2':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(raznostkubov())
-           break
-       if event == 'Площадь Прямоугольного треугольника S=a*b*0.5':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(ploshadtriugolnika())
-           break
-       if event == 'Площадь Круга S=π*r^2':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadkruga())
-           break
-       if event == 'Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadgerron())
-           break
-       if event == 'Площадь Прямоугольника S=ab':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadprugol())
-           break
-       if event == 'Площадь параллелограмма через стороны и угол S=ab*Sinα':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadparugol())
-           break
-       if event == 'Площадь трапеции через основания и высоту S=(a+b)/2*h':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadtrap())
-           break
-       if event == 'Площадь ромба по стороне и углу a^2*Sinα':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadromb())
-           break
-       if event == 'Формула площади правильного многоугольника':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(plodhadmnugol())
-           break
-       if event == 'Квадратное уравнение по дискриминанту':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(kv_ur_dis())
-           break
-       if event == 'Квадратное уравнение по теореме Виета':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(kv_ur_vi())
-           break
-       if event == 'Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(diag_paralel())
-           break
-       if event == 'log':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(log())
-           break
-       if event == 'Автор...':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           author()
-           break
-       if event == 'arccos':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(arccos())
-           break
-       if event == 'arcsin':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(arcsin())
-           break
-       if event == 'arctan':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(arctan())
-           break
-       if event == 'sin':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(sin())
-           break
-       if event == 'cos':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(cos())
-           break
-       if event == 'tan':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(tan())
-           break
-       if event == 'Sin(α+β)':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(Sin_sum())
-           break
-       if event == 'Sin(α-β)':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(Sin_razn())
-           break
-       if event == 'Cos(α+β)':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(Cos_sum())
-           break
-       if event == 'Cos(α-β)':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           otvet(Cos_razn())
-           break
-       if event == 'tg(α+β)':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(tg_sum())
-          break
-       if event == 'tg(α-β)':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(tg_razn())
-          break
-       if event == 'sin2α':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(sin2a())
-          break
-       if event == 'cos2α':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(cos2a())
-          break
-       if event == 'tg2α':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(tg2a())
-          break
-       if event == 'Sinα + Sinβ':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(sins_sum())
-          break
-       if event == 'Sinα - Sinβ':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(sins_razn())
-          break
-       if event == 'Cosα + Cosβ':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(coss_sum())
-          break
-       if event == 'Cosα - Cosβ':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(coss_razn())
-          break
-       if event == 'Перевод из градусов в радианы':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(radians())
-          break
-       if event == 'Перевод из радиан в градусы':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(degrees())
-          break
-       if event == 'Площадь поверхности Куба 6a^2':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(plpovkuba())
-          break
-       if event == 'Длина диагонали куба':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(diagkuba())
-          break
-       if event == 'Площадь поверхности параллелепипеда':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(plpovpar())
-          break
-       if event == 'Объём цилиндра πR^2h':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(obcil())
-          break
-       if event == 'Площадь поверхности цилиндра':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(plpovcil())
-          break
-       if event == 'Объём конуса':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(obkon())
-          break
-       if event == 'Площадь поверхности конуса':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(plpovkon())
-          break
-       if event == 'Объём шара':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(obshar())
-          break
-       if event == 'Площадь поверхности шара':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(plpovshar())
-          break
-       if event == 'Мощность алфавита N = 2^i':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(alfabet())
-          break
-       if event == 'Кол-во информации I = K * i':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(kolinfo())
-          break
-       if event == 'Кол-во разных сообщений Q = N^L':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(kolsoob())
-          break
-       if event == 'Формула Хартли: I = log2 N':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(hartl())
-          break
-       if event == 'Перевод любого числа любой системы счисления в любую другую':
-          window.close()
-          winsound.PlaySound("ButtonClick.wav", 1)
-          otvet(convert_base())
-          break
-
-
-
-
-
-
-       if event == 'debug':
-           window.close()
-           winsound.PlaySound("ButtonClick.wav", 1)
-           debug()
-
-           break
-
-
-'''
-A= F *s**cosα
-
-
-
-
-'''
-
-
-# def delarg(a):
-#   try:
-#       del [a]
-#  except:
 if __name__ == '__main__':
-     while True:
-         Main('start_program')
-         if main_exit == True:
-             #del main_exit
-             break
-
-del x
-del a
-#delarg(b)
-#os.execl(sys.executable, sys.executable, *sys.argv)
+    print('Пожалуйста запустите исполнительный файл')
