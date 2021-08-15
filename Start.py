@@ -1,4 +1,7 @@
-﻿import PySimpleGUI as sg
+try:
+    import PySimpleGUI as sg
+except:
+    print('Пожалуйста установите модуль PySimpleGUI')
 import Main002 as m
 import otvet as o
 import images as i

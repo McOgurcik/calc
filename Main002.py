@@ -1,4 +1,7 @@
-﻿import PySimpleGUI as sg
+﻿try:
+    import PySimpleGUI as sg
+except:
+    print('Пожалуйста установите модуль PySimpleGUI')
 import os
 import sys
 # import imp

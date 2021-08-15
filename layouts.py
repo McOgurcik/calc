@@ -1,4 +1,7 @@
-import PySimpleGUI as sg #1111111111q
+try:
+    import PySimpleGUI as sg
+except:
+    print('Пожалуйста установите модуль PySimpleGUI')
 import images
 def author_layout():
     author_layout = [[sg.T('ку')],[sg.Button(image_data=images.mccree)]]

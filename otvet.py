@@ -1,4 +1,7 @@
-import PySimpleGUI as sg
+try:
+    import PySimpleGUI as sg
+except:
+    print('Пожалуйста установите модуль PySimpleGUI')
 def otvet_layout():
     otvet_layout = [[sg.Multiline('   '+a+'   ')],[sg.Button('Exit')]]
     return otvet_layout
