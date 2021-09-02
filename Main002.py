@@ -51,7 +51,7 @@ def otvet(otvet):
 
 def debug():
     while True:
-       window = sg.Window('debug123', l.layout123(),icon='name.ico')
+       window = sg.Window('debug123', l.layout123(), icon='name.ico')
        event, values = window.read()
        print(event, values)
        if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -65,7 +65,7 @@ def debug():
 
 
 def defsummakvadrata(a,b):
-    x = float(a)**2 + 2 * float(a)*float(b) + float(b)**2
+    x = float(a)**2 + 2 * float(a) * float(b) + float(b)**2
     return x
 def summakvadrata():
    while True:
@@ -144,7 +144,7 @@ def raznostkvadrata():
 
 
 def defsummakuba(a,b):
-    x = float(a)**3 + 3*(float(a)**2)*float(b) + 3*float(a)*(float(b)**2) + float(b)**3
+    x = float(a)**3 + 3 * (float(a)**2) * float(b) + 3 * float(a) * (float(b)**2) + float(b)**3
     return x
 def summakuba():
     while True:
@@ -2243,11 +2243,7 @@ def convert_base():
          window.close()
          return('Отменено')
 
-
-
-
      if event == 'Рассчитать':
-
          if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
 
              # os.execl(sys.executable, sys.executable, *sys.argv)
