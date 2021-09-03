@@ -32,21 +32,21 @@ sg.theme('DefaultNoMoreNagging')   # Add a touch of color
 # All the stuff inside your window.
 
 
-def otvet_layout():
-    otvet_layout = [[sg.Multiline('  '+a+'  ')],[sg.Button('Exit')]]
-    return otvet_layout
-def otvet(otvet):
-    global a
-    a = otvet
-    a = str(a)
-    window_o = sg.Window('otvet',otvet_layout(),icon='name.ico')
-    while True:
-        event, values = window_o.read()
-        # print(event, values)
-        if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
-
-           window_o.close()
-           break
+# def otvet_layout():
+#     otvet_layout = [[sg.Multiline('  '+a+'  ')],[sg.Button('Exit')]]
+#     return otvet_layout
+# def otvet(otvet):
+#     global a
+#     a = otvet
+#     a = str(a)
+#     window_o = sg.Window('otvet',otvet_layout(),icon=i.ico)
+#     while True:
+#         event, values = window_o.read()
+#         # print(event, values)
+#         if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
+#
+#            window_o.close()
+#            break
 
 
 def debug():
@@ -69,7 +69,7 @@ def defsummakvadrata(a,b):
     return x
 def summakvadrata():
    while True:
-     window = sg.Window('Квадрат суммы (a+b)^2', l.summakvadrata_layout())
+     window = sg.Window('Квадрат суммы (a+b)^2', l.summakvadrata_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -109,7 +109,7 @@ def defraznostkvadrata(a,b):
     return x
 def raznostkvadrata():
     while True:
-      window = sg.Window('Квадрат разности (a-b)^2', l.raznostkvadrata_layout())
+      window = sg.Window('Квадрат разности (a-b)^2', l.raznostkvadrata_layout(),icon=i.ico)
       event, values = window.read()
       # print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -148,7 +148,7 @@ def defsummakuba(a,b):
     return x
 def summakuba():
     while True:
-      window = sg.Window('Сумма куба (a-b)^3', l.summakuba_layout())
+      window = sg.Window('Сумма куба (a-b)^3', l.summakuba_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -188,7 +188,7 @@ def defraznostkuba(a,b):
 
 def raznostkuba():
     while True:
-      window = sg.Window('Разность куба (a-b)^3', l.raznostkuba_layout())
+      window = sg.Window('Разность куба (a-b)^3', l.raznostkuba_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -227,7 +227,7 @@ def defraznostkubov(a,b):
     return(x)
 def raznostkubov():
     while True:
-      window = sg.Window('Разность кубов a^2-b^2', l.raznostkubov_layout())
+      window = sg.Window('Разность кубов a^2-b^2', l.raznostkubov_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -265,7 +265,7 @@ def raznostkubov():
 
 def ploshadtriugolnika():
     while True:
-      window = sg.Window('Площадь Прямоугольного треугольника S=a*b*0.5', l.ploshadtriugolnika_layout())
+      window = sg.Window('Площадь Прямоугольного треугольника S=a*b*0.5', l.ploshadtriugolnika_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -318,7 +318,7 @@ def def_kv_ur_dis(a,b,c):
         return(x)
 def kv_ur_dis():
     while True:
-      window = sg.Window('Квадратное уравнение по дискриминанту', l.kv_ur_dis_layout())
+      window = sg.Window('Квадратное уравнение по дискриминанту', l.kv_ur_dis_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -381,7 +381,7 @@ def def_kv_ur_vi(a,b,c):
 
 def kv_ur_vi():
     while True:
-      window = sg.Window('Квадратное уравнение по теореме Виета', l.kv_ur_vi_layout())
+      window = sg.Window('Квадратное уравнение по теореме Виета', l.kv_ur_vi_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -422,7 +422,7 @@ def def_diag_paralel(a,b,c):
     return(d)
 def diag_paralel():
     while True:
-      window = sg.Window('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5', l.diag_paralel_layout())
+      window = sg.Window('Диагональ параллелепипеда  d=(a**2+b**2+c**2)**0.5', l.diag_paralel_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -467,7 +467,7 @@ def def_log(a,b):
 
 def log():
     while True:
-      window = sg.Window('log', l.log_layout())
+      window = sg.Window('log', l.log_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -509,7 +509,7 @@ def def_Sin_sum(a,b):
 
 def Sin_sum():
      while True:
-      window = sg.Window('Sin(α+β)', l.Sin_sum_layout())
+      window = sg.Window('Sin(α+β)', l.Sin_sum_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -549,7 +549,7 @@ def def_arccos(a):
 
 def arccos():
     while True:
-      window = sg.Window('arccos', l.arccos_layout())
+      window = sg.Window('arccos', l.arccos_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -587,7 +587,7 @@ def def_arcsin(a):
     return (math.asin(float(a)))
 def arcsin():
     while True:
-      window = sg.Window('arcsin', l.arcsin_layout())
+      window = sg.Window('arcsin', l.arcsin_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -625,7 +625,7 @@ def def_arctan(a):
     return (math.atan(float(a)))
 def arctan():
     while True:
-      window = sg.Window('arctan', l.arctan_layout())
+      window = sg.Window('arctan', l.arctan_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -664,7 +664,7 @@ def def_sin(a):
     return (math.sin(float(a)))
 def sin():
     while True:
-      window = sg.Window('sin', l.sin_layout())
+      window = sg.Window('sin', l.sin_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -703,7 +703,7 @@ def def_cos(a):
     return (math.cos(float(a)))
 def cos():
     while True:
-      window = sg.Window('cos', l.cos_layout())
+      window = sg.Window('cos', l.cos_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -743,7 +743,7 @@ def def_tan(a):
 
 def tan():
     while True:
-      window = sg.Window('tan', l.tan_layout())
+      window = sg.Window('tan', l.tan_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -789,7 +789,7 @@ def def_Sin_razn(a,b):
 
 def Sin_razn():
      while True:
-      window = sg.Window('Sin(α-β)', l.Sin_razn_layout())
+      window = sg.Window('Sin(α-β)', l.Sin_razn_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -836,7 +836,7 @@ def def_Cos_sum(a,b):
 
 def Cos_sum():
      while True:
-      window = sg.Window('Cos(α+β)', l.Cos_sum_layout())
+      window = sg.Window('Cos(α+β)', l.Cos_sum_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -880,7 +880,7 @@ def def_Cos_razn(a,b):
 
 def Cos_razn():
      while True:
-      window = sg.Window('Cos(α-β)', l.Cos_razn_layout())
+      window = sg.Window('Cos(α-β)', l.Cos_razn_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -923,7 +923,7 @@ def def_tg_sum(a,b):
     return x
 def tg_sum():
      while True:
-      window = sg.Window('tg(α+β)', l.tg_sum_layout())
+      window = sg.Window('tg(α+β)', l.tg_sum_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -967,7 +967,7 @@ def def_tg_razn(a,b):
 
 def tg_razn():
      while True:
-      window = sg.Window('tg(α-β)', l.tg_razn_layout())
+      window = sg.Window('tg(α-β)', l.tg_razn_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1007,7 +1007,7 @@ def def_sin2a(a):
     return x
 def sin2a():
     while True:
-     window = sg.Window('sin2α', l.sin2a_layout())
+     window = sg.Window('sin2α', l.sin2a_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1048,7 +1048,7 @@ def def_cos2a(a):
     return x
 def cos2a():
     while True:
-     window = sg.Window('cos2α', l.cos2a_layout())
+     window = sg.Window('cos2α', l.cos2a_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1088,7 +1088,7 @@ def def_tg2a(a):
     return x
 def tg2a():
     while True:
-     window = sg.Window('tg2α', l.tg2a_layout())
+     window = sg.Window('tg2α', l.tg2a_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1129,7 +1129,7 @@ def def_sins_sum(a,b):
     return x
 def sins_sum():
      while True:
-      window = sg.Window('Sinα + Sinβ', l.sins_sum_layout())
+      window = sg.Window('Sinα + Sinβ', l.sins_sum_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1171,7 +1171,7 @@ def def_sins_razn(a,b):
     return x
 def sins_razn():
      while True:
-      window = sg.Window('Sinα - Sinβ', l.sins_razn_layout())
+      window = sg.Window('Sinα - Sinβ', l.sins_razn_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1214,7 +1214,7 @@ def def_coss_sum(a,b):
     return x
 def coss_sum():
      while True:
-      window = sg.Window('Cosα + Cosβ', l.coss_sum_layout())
+      window = sg.Window('Cosα + Cosβ', l.coss_sum_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1256,7 +1256,7 @@ def def_coss_razn(a,b):
     return x
 def coss_razn():
      while True:
-      window = sg.Window('Cosα - Cosβ', l.coss_razn_layout())
+      window = sg.Window('Cosα - Cosβ', l.coss_razn_layout(),icon=i.ico)
       event, values = window.read()
       #print(event, values)
       if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1296,7 +1296,7 @@ def def_plodhadkruga(a):
     return x
 def plodhadkruga():
     while True:
-     window = sg.Window('Площадь Круга S=π*r^2', l.plodhadkruga_layout())
+     window = sg.Window('Площадь Круга S=π*r^2', l.plodhadkruga_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1339,7 +1339,7 @@ def def_plodhadgerron(a,b,c):
 
 def plodhadgerron():
     while True:
-     window = sg.Window('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5', l.plodhadgerron_layout())
+     window = sg.Window('Площадь треугольника по формуле Герона\n S=(p(p-a)(p-b)(p-c))^0.5', l.plodhadgerron_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1381,7 +1381,7 @@ def def_plodhadprugol(a,b):
     return x
 def plodhadprugol():
     while True:
-     window = sg.Window('Площадь Прямоугольника S=ab', l.plodhadprugol_layout())
+     window = sg.Window('Площадь Прямоугольника S=ab', l.plodhadprugol_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1424,7 +1424,7 @@ def def_plodhadparugol(a,b,c):
     return x
 def plodhadparugol():
     while True:
-     window = sg.Window('Площадь параллелограмма через стороны и угол S=ab*Sinα', l.plodhadparugol_layout())
+     window = sg.Window('Площадь параллелограмма через стороны и угол S=ab*Sinα', l.plodhadparugol_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1466,7 +1466,7 @@ def def_plodhadtrap(a,b,c):
     return x
 def plodhadtrap():
     while True:
-     window = sg.Window('Площадь трапеции через основания и высоту S=(a+b)/2*h', l.plodhadtrap_layout())
+     window = sg.Window('Площадь трапеции через основания и высоту S=(a+b)/2*h', l.plodhadtrap_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1509,7 +1509,7 @@ def def_plodhadromb(a,b):
     return x
 def plodhadromb():
     while True:
-     window = sg.Window('Площадь ромба по стороне и углу a^2*Sinα', l.plodhadromb_layout())
+     window = sg.Window('Площадь ромба по стороне и углу a^2*Sinα', l.plodhadromb_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1554,7 +1554,7 @@ def def_plodhadmnugol(a,b):
     return x
 def plodhadmnugol():
     while True:
-     window = sg.Window('Формула площади правильного многоугольника', l.plodhadmnugol_layout())
+     window = sg.Window('Формула площади правильного многоугольника', l.plodhadmnugol_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1596,7 +1596,7 @@ def def_radians(a):
     return x
 def radians():
     while True:
-     window = sg.Window('Перевод из градусов в радианы', l.radians_layout())
+     window = sg.Window('Перевод из градусов в радианы', l.radians_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1637,7 +1637,7 @@ def def_degrees(a):
     return x
 def degrees():
     while True:
-     window = sg.Window('Перевод из радиан в градусы', l.degrees_layout())
+     window = sg.Window('Перевод из радиан в градусы', l.degrees_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1679,7 +1679,7 @@ def def_plpovkuba(a):
     return x
 def plpovkuba():
     while True:
-     window = sg.Window('Площадь поверхности Куба 6a^2', l.plpovkuba_layout())
+     window = sg.Window('Площадь поверхности Куба 6a^2', l.plpovkuba_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1720,7 +1720,7 @@ def def_diagkuba(a):
     return x
 def diagkuba():
     while True:
-     window = sg.Window('Длина диагонали куба', l.diagkuba_layout())
+     window = sg.Window('Длина диагонали куба', l.diagkuba_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1761,7 +1761,7 @@ def def_plpovpar(a,b,c):
     return x
 def plpovpar():
     while True:
-     window = sg.Window('Площадь поверхности параллелепипеда', l.plpovpar_layout())
+     window = sg.Window('Площадь поверхности параллелепипеда', l.plpovpar_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1804,7 +1804,7 @@ def def_obcil(a,b):
     return x
 def obcil():
     while True:
-     window = sg.Window('Объём цилиндра πR^2h', l.obcil_layout())
+     window = sg.Window('Объём цилиндра πR^2h', l.obcil_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1846,7 +1846,7 @@ def def_plpovcil(a,b):
     return x
 def plpovcil():
     while True:
-     window = sg.Window('Площадь поверхности цилиндра', l.plpovcil_layout())
+     window = sg.Window('Площадь поверхности цилиндра', l.plpovcil_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1888,7 +1888,7 @@ def def_obkon(a,b):
     return x
 def obkon():
     while True:
-     window = sg.Window('Объём конуса', l.obkon_layout())
+     window = sg.Window('Объём конуса', l.obkon_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1933,7 +1933,7 @@ def def_plpovkon(a,b):
     return x
 def plpovkon():
     while True:
-     window = sg.Window('Площадь поверхности конуса', l.plpovkon_layout())
+     window = sg.Window('Площадь поверхности конуса', l.plpovkon_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -1975,7 +1975,7 @@ def def_obshar(a):
     return x
 def obshar():
     while True:
-     window = sg.Window('Объём шара', l.obshar_layout())
+     window = sg.Window('Объём шара', l.obshar_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2016,7 +2016,7 @@ def def_plpovshar(a):
     return x
 def plpovshar():
     while True:
-     window = sg.Window('Площадь поверхности шара', l.plpovshar_layout())
+     window = sg.Window('Площадь поверхности шара', l.plpovshar_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2057,7 +2057,7 @@ def def_alfabet(a):
     return x
 def alfabet():
     while True:
-     window = sg.Window('Мощность алфавита N = 2^i', l.alfabet_layout())
+     window = sg.Window('Мощность алфавита N = 2^i', l.alfabet_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2098,7 +2098,7 @@ def def_kolinfo(a,b):
     return x
 def kolinfo():
     while True:
-     window = sg.Window('Кол-во информации I = K * i', l.kolinfo_layout())
+     window = sg.Window('Кол-во информации I = K * i', l.kolinfo_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2141,7 +2141,7 @@ def def_kolsoob(a,b):
 
 def kolsoob():
     while True:
-     window = sg.Window('Кол-во разных сообщений Q = N^L', l.kolsoob_layout())
+     window = sg.Window('Кол-во разных сообщений Q = N^L', l.kolsoob_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2182,7 +2182,7 @@ def def_hartl(a):
     return x
 def hartl():
     while True:
-     window = sg.Window('Формула Хартли: I = log2 N', l.hartl_layout())
+     window = sg.Window('Формула Хартли: I = log2 N', l.hartl_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2235,7 +2235,7 @@ def def_convert_base(a,b,c):
     return res[::-1]
 def convert_base():
     while True:
-     window = sg.Window('Перевод любого числа любой системы счисления в любую другую', l.convert_base_layout())
+     window = sg.Window('Перевод любого числа любой системы счисления в любую другую', l.convert_base_layout(),icon=i.ico)
      event, values = window.read()
      #print(event, values)
      if event == sg.WIN_CLOSED or event == 'Cancel' or event == 'Exit':
@@ -2268,7 +2268,7 @@ def convert_base():
          break
 
 def author():
-     window = sg.Window('author', l.author_layout())
+     window = sg.Window('Автор', l.author_layout(),icon=i.ico)
      while True:
       event, values = window.read()
       #print(event, values)

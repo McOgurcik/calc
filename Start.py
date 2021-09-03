@@ -8,14 +8,15 @@ import images as i
 import layouts as l
 import winsound
 main_exit = None
-def  window_main(title='Main',size=(1280, 720),s=(None, None), auto_size_text=None, click_submits=None, enable_events=False,font=None, text_color=None,
+def  window_main(title='Формульный калькулятор',size=(1280, 720),s=(None, None), auto_size_text=None, click_submits=None, enable_events=False,font=None, text_color=None,
                  background_color='y', justification=None, pad=None,key=None, k=None, right_click_menu=None, tooltip=None, visible=True, metadata=None):
 
      layout = [ [sg.TabGroup([[sg.Tab('Алгебра', l.tab1_layout()), sg.Tab('Геометрия', l.tab2_layout()) , sg.Tab('Информатика', l.inf_layout()) #, sg.Tab('Физика', l.fuz_layout()
      ]])],
-              [sg.Button('Выход',image_data=None, key='-EXIT-'), sg.Button('debug')],
+              [sg.Button('Выход',image_data=None, key='-EXIT-')],
+              # , sg.Button('debug')
              [sg.Menu(l.menu_def())]]
-     return sg.Window(title, layout,size,background_color='#F3FB62',return_keyboard_events=True,finalize=True,right_click_menu=l.right_click_menu_layout(),icon=i.mccree)
+     return sg.Window(title, layout,size,background_color='#F3FB62',return_keyboard_events=True,finalize=True,right_click_menu=l.right_click_menu_layout(),icon=i.ico)
 recording = have_data = False
 def Main(a):
     #

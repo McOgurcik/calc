@@ -4,7 +4,8 @@ except:
     print('Пожалуйста установите модуль PySimpleGUI')
 import images
 def author_layout():
-    author_layout = [[sg.T('ку')],[sg.Button(image_data=images.mccree)]]
+    author_layout = [[sg.T('Ученик 10»А» Класса МОУ СШ №40\n Пашин Егор Романович\n Руководитель:Учитель информатики,\n Глазунова Марина Николаевна')]]
+    # ,[sg.Button(image_data=images.mccree)]]
     return author_layout
 def tab2_layout_1():
     tab2_layout_1 = [[sg.Button('Площадь Прямоугольного треугольника S=a*b*0.5'),sg.Button('Площадь Прямоугольника S=ab')],[sg.Button('Площадь Круга S=π*r^2'),sg.Button('Площадь параллелограмма через стороны и угол S=ab*Sinα')],
@@ -205,9 +206,7 @@ def tg2a_layout():
 
 
 def menu_def():
-    menu_def_ = [['File', ['Open', 'Save', 'Exit',]],
-                 ['Edit', ['Paste', ['Special', 'Normal',], 'Undo'],],
-                 ['Help', 'Автор...']]
+    menu_def_ = [['Help', 'Автор...']]
     return menu_def_
 def right_click_menu_layout():
     right_click_menu =  [[], ['Exit']]
